@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common_margin_5"
+            android:background="@drawable/rounded_bg">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rounded_im_cardView"
+                android:layout_width="@dimen/common_margin_100"
+                android:layout_height="@dimen/common_margin_100"
+                android:layout_margin="@dimen/common_margin_15"
+                android:elevation="@dimen/common_margin_10"
+                app:cardCornerRadius="@dimen/common_margin_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/detail_album_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/song_pic"
+                    tools:src="@drawable/ic_launcher_background" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/detail_song_title_text"
+                android:layout_width="@dimen/common_margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_15"
+                android:layout_marginEnd="@dimen/common_margin_10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="@dimen/common_margin_4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_txt_size_20"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rounded_im_cardView"
+                app:layout_constraintTop_toBottomOf="@+id/rounded_im_cardView"
+                tools:text="I want you back" />
+
+            <TextView
+                android:id="@+id/detail_album_title_text"
+                android:layout_width="@dimen/common_margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_15"
+                android:layout_marginEnd="@dimen/common_margin_10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="@dimen/common_margin_4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_txt_size_18"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rounded_im_cardView"
+                app:layout_constraintTop_toTopOf="@id/rounded_im_cardView"
+                tools:text="The Ultimate" />
+
+            <TextView
+                android:id="@+id/detail_song_artist_text"
+                android:layout_width="@dimen/common_margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_margin_10"
+                android:maxLines="1"
+                android:padding="@dimen/common_margin_4"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/common_txt_size_15"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rounded_im_cardView"
+                app:layout_constraintTop_toBottomOf="@+id/detail_song_title_text"
+                tools:text="MJ" />
+
+            <TextView
+                android:id="@+id/detail_song_released_text"
+                android:layout_width="@dimen/common_margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_15"
+                android:layout_marginEnd="@dimen/common_margin_10"
+                android:maxLines="1"
+                android:padding="@dimen/common_margin_4"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/common_txt_size_15"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/rounded_im_cardView"
+                app:layout_constraintTop_toBottomOf="@id/detail_album_title_text"
+                tools:text="1970" />
+
+            <TextView
+                android:id="@+id/detail_song_genre_text"
+                android:layout_width="@dimen/common_margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_15"
+                android:layout_marginEnd="@dimen/common_margin_10"
+                android:maxLines="1"
+                android:padding="@dimen/common_margin_4"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/common_txt_size_15"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/rounded_im_cardView"
+                app:layout_constraintTop_toBottomOf="@id/detail_song_released_text"
+                tools:text="Pop" />
+
+
+            <TextView
+                android:id="@+id/detail_song_time_text"
+                android:layout_width="@dimen/common_margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_15"
+                android:layout_marginEnd="@dimen/common_margin_10"
+                android:maxLines="1"
+                android:padding="@dimen/common_margin_4"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/common_txt_size_15"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/detail_song_genre_text"
+                app:layout_constraintTop_toBottomOf="@id/detail_song_released_text"
+                app:layout_constraintTop_toTopOf="@+id/detail_song_genre_text"
+                tools:text="4.56" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

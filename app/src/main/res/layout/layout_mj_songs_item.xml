@@ -1,0 +1,99 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common_margin_5"
+    android:background="@drawable/rounded_bg">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rounded_im_cardView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/common_margin_15"
+        android:layout_marginEnd="@dimen/common_margin_15"
+        android:layout_marginBottom="15dp"
+        android:elevation="@dimen/common_margin_10"
+        app:cardCornerRadius="@dimen/common_margin_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/song_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/song_pic"
+            tools:src="@drawable/ic_launcher_background" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/song_title_text"
+        android:layout_width="@dimen/common_margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin_10"
+        android:layout_marginTop="@dimen/common_margin_10"
+        android:layout_marginEnd="@dimen/common_margin_10"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="@dimen/common_margin_4"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/common_txt_size_17"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/rounded_im_cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry"
+        tools:text="I want you back" />
+
+    <TextView
+        android:id="@+id/album_title_text"
+        android:layout_width="@dimen/common_margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin_10"
+        android:layout_marginEnd="@dimen/common_margin_10"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="@dimen/common_margin_4"
+        android:textColor="@color/title_description_color"
+        android:textSize="@dimen/common_txt_size_15"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/rounded_im_cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_title_text"
+        tools:text="The Ultimate" />
+
+    <TextView
+        android:id="@+id/genre_title_text"
+        android:layout_width="@dimen/common_margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin_10"
+        android:layout_marginEnd="@dimen/common_margin_10"
+        android:maxLines="1"
+        android:padding="@dimen/common_margin_4"
+        android:textColor="@color/title_description_color"
+        android:textSize="@dimen/common_txt_size_15"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/song_time_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_title_text"
+        tools:text="Pop" />
+
+    <TextView
+        android:id="@+id/song_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin_10"
+        android:layout_marginEnd="@dimen/common_margin_10"
+        android:padding="@dimen/common_margin_4"
+        android:textColor="@color/title_description_color"
+        android:textSize="@dimen/common_txt_size_15"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/rounded_im_cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_title_text"
+        tools:text="3.45" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
